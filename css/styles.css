@@ -1,0 +1,284 @@
+
+#headerContainer {
+    background-image: url('https://images.pexels.com/photos/14780214/pexels-photo-14780214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover; /* or contain, depending on your needs */
+    background-position: center;
+    height: 400px; /* Adjust as necessary */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-color: darkgrey;*/
+}
+
+/* Wrapper for your content */
+.content-wrap {
+    min-height: 100%; /* Minimum height of 100% for the content */
+    /* Push the footer down with the same amount of its height */
+    margin-bottom: -50px; /* Adjust this to match your footer's height */
+}
+
+/* Sticky Footer */
+#mainFooter {
+    background-color: #333; /* Footer color */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    height: 50px; /* Adjust as per your footer's height */
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+/* Clearfix for the content-wrap */
+.content-wrap:after {
+    content: "";
+    display: block;
+    height: 50px; /* Same as footer's height */
+}
+#lateShift-left {
+
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: flex-end; /* Aligns text content to the right */
+    min-height: 400px; /* Adjust as needed */
+
+}
+
+#lateShift-left::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100%;
+    background-image: url("https://media.gettyimages.com/id/1081869356/de/foto/%C3%BCbernahme-der-sp%C3%A4tschicht-mit-wahrer-hingabe.jpg?s=612x612&w=gi&k=20&c=JCswDvtnYkWAK67MfW5Ljnxk1HxiL8EJVev9oQdXMzw=");
+    background-size: cover;
+    background-position: center;
+}
+
+#lateShift-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns text content to the left */
+    min-height: 400px; /* Adjust as needed */
+}
+
+#lateShift-right::before {
+    content: '';
+    position: absolute;
+    right: 0; /* Position the image on the right */
+    top: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100%;
+    background-image: url('https://media.gettyimages.com/id/808236358/de/foto/feng-shui-compass.jpg?s=2048x2048&w=gi&k=20&c=GAkPg1IuCz4TlBGq9MkTdzcyVOYfAWKykBhnIJketxY=');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.text-content-left {
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8); /* Optional: for readability */
+    width: 50%; /* Adjust as needed */
+    z-index: 1; /* Ensures the text content is above the pseudo-element */
+
+}
+.text-content-right {
+    padding: 20px;
+    background-color: rgba(209, 135, 72, 0.8); /* Optional: for readability */
+    width: 50%; /* Adjust as needed */
+    z-index: 1; /* Ensures the text content is above the pseudo-element */
+
+}
+
+
+/* Other common styles can go here */
+
+/* Styles for screens larger than 600px */
+@media screen and (min-width: 601px) {
+    #lateShift-left h2 {
+        color: lightgrey;
+    }
+    #lateShift-left p {
+        color: whitesmoke;
+    }
+
+    #mainNav {
+        background-color: #333; /* Or any color that matches your design */
+        overflow: hidden;
+    }
+
+    #mainNav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center; /* Centers the nav items horizontally */
+    }
+
+    #mainNav ul li {
+        float: left;
+    }
+
+    #mainNav ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #mainNav ul li a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    #mainFooter {
+        background-color: #333; /* Same as header for consistency */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #mainFooter ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #mainFooter ul li {
+        display: inline; /* Inline display for horizontal list */
+        margin: 0 10px;
+    }
+
+    #mainFooter ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #mainFooter ul li a:hover {
+        color: #ccc;
+    }
+
+
+    h1, h2, p {
+        text-align: center; /* Centers the text */
+        margin: 20px; /* Adds margin around the elements */
+        padding: 15px; /* Adds padding inside the elements */
+        border: 2px; /* Adds a border around the elements */
+    }
+
+    /* Your other styles for larger screens */
+}
+
+/* Styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    #lateShift-left h2 {
+        color: lightgrey;
+    }
+    #lateShift-left p {
+        color: whitesmoke;
+    }
+
+    #lateShift-left {
+        flex-direction: column; /* Stack the items vertically on smaller screens */
+    }
+
+    #lateShift-left img {
+        max-width: 100%; /* Allow the image to take full width on smaller screens */
+        margin-right: 0; /* Remove the margin-right on smaller screens */
+    }
+
+    .text-content-left {
+        align-items: flex-start; /* Align text to the start on smaller screens */
+    }
+    /* Hamburger Menu */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+
+    #mainNav ul {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        width: 100%;
+        left: 0;
+        top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menuToggle:checked + .menu-icon + #mainNav ul {
+        display: flex;
+    }
+
+    /* Styles for nav links */
+    #mainNav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #mainNav ul li a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    #mainNav ul li a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    #mainFooter {
+        background-color: #333; /* Same as header for consistency */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #mainFooter ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #mainFooter ul li {
+        display: inline; /* Inline display for horizontal list */
+        margin: 0 10px;
+    }
+
+    #mainFooter ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #mainFooter ul li a:hover {
+        color: #ccc;
+    }
+
+
+    h1, h2, p {
+        text-align: center; /* Centers the text */
+        margin: 10px; /* Adds margin around the elements */
+        padding: 5px; /* Adds padding inside the elements */
+        border: 2px; /* Adjusts the border */
+    }
+
+    /* Your other styles for smaller screens */
+}
