@@ -5,6 +5,7 @@
     background-position: center;
     height: 400px; /* Adjust as necessary */
 }
+
 #headerContainer-career {
     background-image: url('https://media.gettyimages.com/id/1346944001/de/foto/nahaufnahme-von-kollegen-die-ihre-h%C3%A4nde-stapeln.jpg?s=1024x1024&w=gi&k=20&c=XNLKdK-lRPWQfdW7pcQyMZKIs2LHntwBCuvUXyP8QXo=');
     background-size: cover; /* or contain, depending on your needs */
@@ -33,11 +34,19 @@ html, body {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    height: 50px; /* Adjust as per your footer's height */
+    height: 80px; /* Adjust as per your footer's height */
     position: relative;
     bottom: 0;
     left: 0;
 }
+
+#mainFooter p {
+    color: white; /* oder jede andere Farbe */
+    font-size: 14px; /* Passen Sie die Größe nach Bedarf an */
+    text-align: center; /* Zentriert den Text im Footer */
+    /* Weitere Styling-Einstellungen */
+}
+
 
 /* Clearfix for the content-wrap */
 .content-wrap:after {
@@ -45,6 +54,7 @@ html, body {
     display: block;
     height: 50px; /* Same as footer's height */
 }
+
 #lateShift-left {
 
     position: relative; /* Needed for absolute positioning of pseudo-element */
@@ -108,6 +118,7 @@ html, body {
     background-size: cover;
     background-position: center;
 }
+
 #career-right {
     position: relative;
     display: flex;
@@ -129,20 +140,32 @@ html, body {
 }
 
 
-
 .text-content-left {
     padding: 20px;
     background-color: rgba(51, 51, 51, 0.8); /* Optional: for readability */
     width: 50%; /* Adjust as needed */
     z-index: 1; /* Ensures the text content is above the pseudo-element */
-
 }
+
 .text-content-right {
     padding: 20px;
     background-color: rgba(209, 135, 72, 0.8); /* Optional: for readability */
     width: 50%; /* Adjust as needed */
     z-index: 1; /* Ensures the text content is above the pseudo-element */
+}
 
+.text-content-career-left {
+    padding: 20px;
+    background-color: rgba(238, 224, 203, 0.8); /* Optional: for readability */
+    width: 50%; /* Adjust as needed */
+    z-index: 1; /* Ensures the text content is above the pseudo-element */
+}
+
+.text-content-career-right {
+    padding: 20px;
+    background-color: rgba(186, 168, 152, 0.8); /* Optional: for readability */
+    width: 50%; /* Adjust as needed */
+    z-index: 1; /* Ensures the text content is above the pseudo-element */
 }
 
 form {
@@ -191,6 +214,12 @@ input[type="file"] {
     display: inline-block;
 }
 
+.info-icon img {
+    width: 1em; /* Setzt die Breite des Icons relativ zur Schriftgröße des umgebenden Textes */
+    height: auto; /* Erhält das Seitenverhältnis des Icons */
+    margin-left: 5px; /* Optionaler Abstand zum Text */
+}
+
 .info-text {
     display: none;
     position: absolute;
@@ -214,6 +243,7 @@ input[type="file"] {
     #lateShift-left h2 {
         color: lightgrey;
     }
+
     #lateShift-left p {
         color: whitesmoke;
     }
@@ -290,6 +320,7 @@ input[type="file"] {
     #lateShift-left h2 {
         color: lightgrey;
     }
+
     #lateShift-left p {
         color: whitesmoke;
     }
@@ -306,6 +337,7 @@ input[type="file"] {
     .text-content-left {
         align-items: flex-start; /* Align text to the start on smaller screens */
     }
+
     /* Hamburger Menu */
     .hamburger-menu {
         display: block;
