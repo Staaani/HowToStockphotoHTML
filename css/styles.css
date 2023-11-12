@@ -5,6 +5,12 @@
     background-position: center;
     height: 400px; /* Adjust as necessary */
 }
+#headerContainer-career {
+    background-image: url('https://media.gettyimages.com/id/1346944001/de/foto/nahaufnahme-von-kollegen-die-ihre-h%C3%A4nde-stapeln.jpg?s=1024x1024&w=gi&k=20&c=XNLKdK-lRPWQfdW7pcQyMZKIs2LHntwBCuvUXyP8QXo=');
+    background-size: cover; /* or contain, depending on your needs */
+    background-position: center;
+    height: 400px; /* Adjust as necessary */
+}
 
 html, body {
     height: 100%;
@@ -61,6 +67,28 @@ html, body {
     background-position: center;
 }
 
+#career-left {
+
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: flex-end; /* Aligns text content to the right */
+    min-height: 400px; /* Adjust as needed */
+
+}
+
+#career-left::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100%;
+    background-image: url("https://media.gettyimages.com/id/1387362037/de/foto/high-angle-view-of-male-and-female-programmers-working-on-computers-at-desk-in-office.jpg?s=1024x1024&w=gi&k=20&c=cqqcq212e0xr3P5pttQwixYwN8Ql-HU4vCk9Jju-ei8=");
+    background-size: cover;
+    background-position: center;
+}
+
 #lateShift-right {
     position: relative;
     display: flex;
@@ -77,6 +105,25 @@ html, body {
     width: 50%; /* Adjust the width as needed */
     height: 100%;
     background-image: url('https://media.gettyimages.com/id/808236358/de/foto/feng-shui-compass.jpg?s=2048x2048&w=gi&k=20&c=GAkPg1IuCz4TlBGq9MkTdzcyVOYfAWKykBhnIJketxY=');
+    background-size: cover;
+    background-position: center;
+}
+#career-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns text content to the left */
+    min-height: 400px; /* Adjust as needed */
+}
+
+#career-right::before {
+    content: '';
+    position: absolute;
+    right: 0; /* Position the image on the right */
+    top: 0;
+    width: 50%; /* Adjust the width as needed */
+    height: 100%;
+    background-image: url('https://media.gettyimages.com/id/1132119295/de/foto/successful-business-team-taking-selfie.jpg?s=1024x1024&w=gi&k=20&c=3a1eMY-IJn_kCiLHrN4StFRdUl7K5eHFyy8liMOiJ8c=');
     background-size: cover;
     background-position: center;
 }
