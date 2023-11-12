@@ -145,6 +145,67 @@ html, body {
 
 }
 
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+.info-container {
+    position: relative;
+    display: inline-block;
+}
+
+.info-icon {
+    cursor: pointer;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.info-text {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    padding: 5px;
+    z-index: 1;
+    right: 0;
+    width: 200px; /* Adjust as needed */
+}
+
+.info-icon:hover + .info-text {
+    display: block;
+}
+
 
 /* Other common styles can go here */
 
